@@ -127,10 +127,10 @@ These changes in climate dynamics are compared with those previously linked to h
 \section{Data}
 The study area was defined similarly to that of \citet{cortinas2000climatology}, but reaching further eastward, from 96\degree W to 72\degree W and 38\degree N to 50\degree N. Data were collected for all U.S. states that border the Great Lakes---Illinois, Indiana, Michigan, Minnesota, New York, Ohio, Pennsylvania, and Wisconsin---plus Iowa and the Canadian provinces of Ontario and Quebec.
 
-\subsection{Use of station observations}
+\subsection{Weather station observations}
 Since estimates of freezing rain incidence are included in several well-known reanalyses, a climatology could be created based only upon one of these products, but a few factors would make such an analysis unreliable. One regional reanalysis with high vertical resolution, for example, the North American Regional Reanalysis (NARR), provides estimates of freezing rain incidence using the precipitation typing algorithm developed by \citet{baldwin1993development} for the NCEP Eta Model, which drives NARR. A direct comparison of NARR's precipitation type flags with station observations was carried out in a case study of a 1990 event that affected the South-Central U.S. by \citet{blunden2011138}, indicating that NARR estimates are unreliable predictors of station observations. This was attributed in part to the fact that NARR reports only one precipitation type at each grid cell in every three-hourly product. Models originally developed to identify winter precipitation types for numerical weather prediction (such as those described by \citet{cortinas2002probabilistic} and \citet{mullens2017multialgorithm}) have been applied to reanalysis outputs with mixed results. A recent example is the model described by \citet{kamarainen2017method}, which compares vertical profiles of relative humidity and temperature with regionally-calibrated threshold values to identify likely precipitation type. The model achieved a 36-year spatially-averaged correlation with weather station observations of 0.93 over all of Europe, but comparing results at individual grid cells containing weather stations with freezing rain observations, the model yielded a mean correlation of only 0.44. This exemplifies the drawback of such approaches: modeling each of the two formation processes leading to freezing rain and discerning them from other precipitation types, ice pellets in particular, is difficult even with a high vertical resolution \citep{reeves2014sources}. In addition, the influence of topography and proximity to bodies of water occurs at a highly localized scale that may not be properly reflected when averaged into a grid cell. Considering all these limitation, temporally consistent direct observations from weather stations offer the most reliable means of assessing the true distribution of freezing rain.
 
-The primary data for this paper are freezing rain observations from hourly surface weather reports that are part of the Integrated Surface Database (ISD) maintained by the National Centers for Environmental Data \citep{smith2011integrated}. Although these direct surface observations likely provide a more reliable assessment of the true distribution of freezing rain than observations from reanalysis models or cooperative stations (of which the latter are subject to more severe reporting biases between stations), their use in trend analysis is made difficult by instrumentation changes in the observational record. The often-highly localized nature of freezing rain formation also severely limits the extent to which observations at each station can be assumed to be regionally representative. Observations span from 1976 to 2014 and include data from human observers, the Automated Weather Observing System, the Automated Surface Observing System (ASOS), and automated stations managed by Environment and Climate Change Canada.
+The primary data for this paper are freezing rain observations from hourly surface weather reports that are part of the Integrated Surface Database (ISD) maintained by the National Centers for Environmental Data \citep{smith2011integrated}. Although these direct surface observations likely provide a more reliable assessment of the true distribution of freezing rain than observations from reanalysis models or cooperative stations (of which the latter are subject to more severe reporting biases between stations), their use in trend analysis is made difficult by instrumentation changes in the observational record. The often-highly localized nature of freezing rain formation also severely limits the extent to which observations at each station can be assumed to be regionally representative. Observations used in this study span from 1976 to 2014 and include data from human observers, the Automated Weather Observing System, the Automated Surface Observing System (ASOS), and automated stations managed by Environment and Climate Change Canada.
 
 \subsubsection{Processing of station observations and consideration of instrumentation change}
 The infrequent nature of freezing rain occurrence suggests a low signal-to-noise ratio for any change in climatology, underscoring the importance of having a long and consistent record with which to investigate trends. ISD data were filtered to remove special (i.e. non-standard) observations and to normalize the number of observations to one per hour when observed weather types were present. A standard of 90\% data completeness was adopted for this work, compared with \citet{cortinas2000climatology}, which excluded any location with less than 80\% present weather reports. Locations were excluded for which manual observers were not present throughout the night in the winter months up until the mid-1990s though the overall threshold for data completeness was met. Despite efforts in quality control, issues remained with intermittent manual observation during some hours in the first two decades of observations. After performing this quality control, 97 stations out of an initial 121 met the criteria to be used in the analysis. An average of 97.4\% of hours each year were accounted for at the included stations.
@@ -147,7 +147,7 @@ Synoptic-scale weather variables were examined using the NARR, which is produced
 
 \section{Trends in freezing rain frequency and duration}
 \subsection{Methods}
-The existence of trends in the seasonal and annual frequency of freezing rain reports was tested for using a modified form of the non-parametric Mann-Kendall test for a monotonic trend and the Theil-Sen method for estimating a linear slope. Both are techniques to assess monotonic trends \citep{chandler2011statistical}. Though they offer less statistical power than parametric methods, such tests were chosen because the time series of freezing rain reports are positively skewed, with a small number of long-lasting, sprawling storms relative to the number of shorter, more localized events. This was confirmed by plotting histograms of the frequency (hours per time period) and duration (hours per event) of observations.
+The existence of trends in the seasonal and annual frequency of freezing rain reports was tested for using a modified form of the non-parametric Mann-Kendall test for a monotonic trend and the Theil-Sen method for estimating a linear slope. Both are techniques to assess monotonic trends \citep{chandler2011statistical}. Though they offer less statistical power than parametric methods, such tests were chosen because the time series of freezing rain observation counts are positively skewed, with a small number of long-lasting, spatially expansive storms relative to the number of shorter, more localized events. This was confirmed by plotting histograms of the frequency (hours of freezing rain per time period) and duration (hours per event) of observations.
 
 \subsubsection{Modified Mann-Kendall test for monotonic trend}
 The Mann-Kendall test assesses the relative magnitude (rank) of observations rather than their absolute values. The null hypothesis of the test is that the data are randomly ordered as opposed to exhibiting a monotonic trend in time. The test is carried out for the sequence of both annual and monthly total hours of freezing rain reported at each location, $y_1,\ldots,y_T$, at times, $t_1,\ldots,t_T$. The differences of each permutation of pairs $\{d(t_1,t_2)=y_{t2}-y_{t1}:t_2>t_1\}$ is calculated for all $T$ observations and then assigned values of $+1$ for positive differences, zero for ties, and $-1$ for negative differences. The test statistic for the original Mann-Kendall method, $S$, is the sum of all these values:
@@ -173,13 +173,118 @@ In the case that the Mann-Kendall test indicates a monotonic trend exists, the t
 
 \todo[inline]{ADD: (-1.5$\pm$2.1\degree C [1$\sigma$] in the Great Lakes and Northeast during an event)}
 
-Figure \ref{fig:trendmap} depicts linear trends in total annual hours of freezing rain as calculated using the Theil-Sen method at all 97 stations. The values are shown as percentage change from a 1976--1985 baseline to the 2014 total hours of freezing rain expected by the trend line. As shown, the modified Mann-Kendall test indicated the existence of monotonic annual trends at 10 locations at the $p<0.05$ significance level. While there appears to be a general decrease in annual hours of freezing rain in the south of the region and an increase to the north in south-central Canada, much of the region in the mid-latitudes has not experienced a consistent annualized trend over the past 39 years. This is intuitive, since expected decreases in the "shoulder" fall and spring months and increases during the mid-winter months may be expected to have competing effects on the overall annual freezing rain frequency.
+Figure \ref{fig:trendmap} depicts linear trends as change per decade in total annual hours of freezing rain, calculated using the Theil-Sen method at all 97 stations. As shown, the modified Mann-Kendall test indicated the existence of monotonic annual trends at 16 locations at the $p<0.05$ significance level. While there appears to be a general decrease in annual hours of freezing rain in the south of the region and an increase to the north in south-central Canada, much of the western region in the mid-latitudes has not experienced a consistent annualized trend over the 39 years studied. The possibility remains that expected decreases in the "shoulder" fall and spring months and increases during the mid-winter months may be expected to have competing effects on the overall annual freezing rain frequency.
 
-\begin{figure*}
-\centering
-\includegraphics[width=1.0\textwidth]{FZRA_trend_maps.png}
-\caption{\label{fig:trendmap}Elevation maps of the the Great Lakes region summarizing linear trends in total annual hours of freezing rain observed at each station from 1976 to 2014. Representative, or "typical" total annual hours of freezing rain calculated using the Theil-Sen slope estimation method are shown for first year (top left) and last year (top right) of the study period. Trends are depicted on a decadal scale at bottom. Filled circles at each observing station are scaled by $1 - p$ and Xs denote stations where the modified Mann-Kendall test indicates a monotonic trend at the $p<0.05$ level.}
-\end{figure*}
+Figure \ref{fig:trendmap} indicates distinct regional trends. Stations along the northeastern Appalachian Mountains, the Catskills, and the Adirondacks, for example, which frequently experience topography-forced events, have experienced a consistent decrease in freezing rain event frequency, along with stations near the eastern shores of Lakes Erie and Ontario. Stations centered on Long Island, on the other hand, indicate substantial increases. 
+
+NYC note about SST: \citet{ramos2006sensitivity}
+look to \citet{cortinas2000climatology} for Great Lakes-specific stuff including SST, lake effect, surface cyclone tracks
+
+Monthly trends in freezing rain frequency averaged across the entire Great Lakes region reveal a significant monotonic trend only for March \todo[inline]{update after removing modification to MK}. A weaker hypothesis is that the average freezing rain frequency for some months has changed.\todo[inline]{[RBR25]I think this sentence needs changing.  Transition from previous sentence made more clear, perhaps?  We have, also, moved to the split time period.  This paragraph is one of our key results and clarity in transition is needed. Lead with Mann-Whitney. (reference). Mann-Whitney described earlier, we use it. Dont just have it leap out.  Weaker than what? THIS paragraph is important. Unpack it and describe it. (Matt comment: agreed, this part is very bad)} This was tested for using the Mann-Whitney test, a non-parametric counterpart to the two-sample t-test that determines whether the medians of two series are different from one another. Figure \ref{fig:seasonal} shows the frequency … and the $p$-values calculated for each month after computing the Mann-Whitney test, which independently compares the rank of all entries of the two time series for the 1976--1996 period and the 1997--2014 period. As shown, the median duration of freezing rain in the months of November and March has changed, along with the mid-winter month of January. The box-and-whisker plots suggest that the "tightening up" of the winter distribution of freezing rain occurrence, as predicted by prior studies like \citet{cheng2011possible}, has likely begun. However, all that can be said to be robust from this analysis of seasonality is that the median freezing rain frequency has changed in recent years for the months of November, January, and March, and that there has been a robust region-wide decrease in freezing rain occurrence during March.
+
+\subsection{Trends in the duration of ice storms}
+Historically, the duration over which freezing rain is observed in a location has been assumed to adequately describe the severity of the ice storm in terms of total glaze ice accumulation. Since winds must be relatively mild to maintain above-freezing surface temperatures and the latent heat .......
+
+
+\section{Trends in weather patterns during ice storms}
+An initial inspection of the temporal and spatial evolution of freezing rain---diurnally, monthly and annually as well as across the domain and at a higher, regional resolution---was carried out to look for clues regarding changes in physical mechanisms. This is difficult because of the rare and highly local nature of the events---often just a few large storms every year or so obfuscate any slower underlying changes.
+
+Although the ice storm is the topic of interest in this work because we are interested in events that pose a danger to society, such a concept is inappropriate for analysis here since ice accretion occurs at different rates on different surfaces and under different conditions, and estimation of radial accretion of ice on a cylindrical surface using variables such as wind and wet-bulb temperature has shown inconsistent results \citep{add a citation for this}. Previous studies, such as \citet{swaminathan2015modeling}, have used events which \textit{Storm Data} noted as having included freezing rain or reports of damage from ice accumulation as a starting point from which to analyze ice storms. 
+
+Therefore, freezing rain events are defined and analyzed as a proxy for ice storms in an analysis of the dynamics underlying observed changes in freezing rain frequency. A freezing rain event is defined as having begun at the first hourly report of freezing rain anywhere in the region and continuing until at least six hours has elapsed without any further reports of freezing rain across the domain of study. As a sensitivity analysis, the methods were carried out varying the minimum number of hours constituting an event between one and six and varying the maximum number of intervening hours between freezing rain reports for which reports were considered a single event between one and six. A comparison of the results revealed that although the total number of events observed was highly sensitive to the choice of both parameters, the results of the analysis of synoptic weather conditions present during storms was not.
+
+As mentioned in the introduction, synoptic conditions during ice storms can be broadly categorized into several distinct archetypal patterns, varying from those caused by extratropical cyclone-anticyclone interactions (mainly in the Midwest to southeastern Canada) to those caused mainly by orography (cold air damming and trapping throughout the Northeast Appalachian Range and along its eastern slopes). By analyzing these synoptic conditions and then classifying stations into regional groups that share similar conditions and freezing rain frequency distributions, we identify regional similarities in the dynamics driving freezing rain events.
+
+A synoptic weather typing and clustering procedure is carried out as follows:
+
+\begin{enumerate}
+\item
+For each event identified across the study region from 1976 to 2014, two anomaly maps were obtained---one of MSL pressure and one of 850 mb geopotential height---from the three-hourly NARR output closest to the middle of event occurrence. Anomalies were determined by subtracting the monthly climatology of the entire 1979--2014 period.
+\item
+The k-means clustering algorithm (with $k=3$, in accordance with \citet{erfani2012automated} and verified using silhouette plots) was applied to the anomaly maps and the resulting centroid maps were constructed. These centroid maps represent the mean pressure anomalies for each of the three storm patterns.
+\begin{itemize}
+\item
+The MSL pressure and 850 mb height anomaly maps for each event were reshaped into vectors and concatenated, creating a matrix with each row representing an event and each column representing a spatial grid cell. k-means clustering was chosen since it performed the best in \citet{erfani2012automated}'s freezing rain synoptic typing validation, outperforming hierarchical and average linkage methods.\todo[inline]{how did it "outperform"? Explain. This is vague and bad}
+\item
+Events were classified into one of three clusters and three centroid maps of MSL pressure anomaly and 850 mb height anomaly were created and analyzed.
+\item
+The clusters were compared to the archetypal patterns manually classified by \citet{rauber2001synoptic} for physical intuition.
+\end{itemize}
+\end{enumerate}
+
+To link freezing rain trends with possible changes in the meteorological forcing of events, the steps above were repeated, dividing the time record into two spans. The new centroid maps were compared to old ones to identify any changes in synoptic conditions. In addition to rerunning the k-means algorithm to create new clusters, the events in the 1997--2014 period were also classified into the original clusters created from the 1979--2014 dataset by assigning each one according to the minimum Euclidean distance between the event and the centroids. 
+
+Producing separate cluster results for each of the two periods allowed analysis of how underlying modes themselves may have changed, and binning the more recent events to the original clusters trained on the first period made it possible to investigate how the relative importance of different archetypal patterns in freezing rain formation may have shifted.
+
+\subsection{Results of dynamics analysis}
+\subsection{Classification of storms into three archetypal patterns}
+The k-means clustering algorithm used to group storms into three archetypal patterns resulted in the centroid pressure and geopotential height anomaly maps shown in Figure \ref{fig:centroids}. \citet{erfani2012automated} produced average anomaly maps of Rauber's manually selected groups that were used here for comparison. Table \ref{archetypalpatterns} summarizes these comparisons and key statistics for each cluster.
+
+The first cluster (Figure \ref{fig:centroids}A) is similar to Rauber's pattern B, describing freezing rain events that occur at the occlusion sector of warm fronts, as well as Rauber's pattern G, describing cold air trapping. The former occurs just north of the 0\degree C surface isotherm when warm air overruns a subfreezing surface layer. Cold air trapping occurs when approaching continental cyclones advect warm air over the Appalachians, trapping cold air in valleys at the surface and leading to freezing rain. Both MSL pressure and 850 mb anomalies closely resemble those plotted by \citet{rauber2001synoptic}, where  8.1\% of freezing rain events between 1970-1994 were classified as being caused by these conditions. \todo[size=\small]{compare with \% from this study}
+
+The second cluster (Figure \ref{fig:centroids}B) represents the extratropical cyclone-forced storm that most often affects the Midwestern U.S. and especially its southern region (Rauber pattern C). Storms that take on this pattern were identified by Rauber to be some of the longest in duration and most damaging throughout the Midwestern U.S., due to their high-pressure gradients and the higher winds that result. \todo[size=\small]{compare with \% from this study}
+
+The third cluster (Figure \ref{fig:centroids}C) is similar to Rauber's patterns D and E. The D group refers to systems that produce freezing rain in the western quadrant of arctic high-pressure anomalies interacting with warmer air from the Southeast. The E pattern describes cold air damming, synoptic conditions which trigger freezing rain when arctic air masses are dammed against the eastern slopes of the Appalachian range and warmer air moving in as a result of easterly flow from the Atlantic overtakes it. Rauber identified this archetypal pattern as contributing to 5.7\% of all storms and many of the longest, with a quarter of events lasting longer than 12 hours.\todo[size=\small]{compare with \% from this study} Freezing rain from these systems would be expected in southern Quebec and Ontario, in the freezing rain hotspots of Ottawa and Montreal and throughout the Appalachian Range. \todo[inline]{rework this with new clusters and add discussion of table data}
+
+\subsection{Changes in meteorological forcing}
+Changes in meteorological forcing were investigated by separately clustering the first and second half of the 36-year time period of NARR coverage and examining the changes in centroid anomaly maps from the former to the  latter half of observations. While there are close similarities with the clusters identified in the analysis of regions above, several notable differences are observed for the clusters as computed for the two separate time periods and for the clusters as trained upon the first half of the time period later in this section. As such, the clusters are numbered to highlight that distinction. The results are depcited in Figure \ref{fig:clusters}.
+
+\citet{erfani2012automated} found that three clusters were appropriate to describe the significantly different archetypal patterns causing freezing rain by analyzing wind and precipitation variances for different values of $k$. Their analysis, however, carried out two different clustering algorithms, one for MSL pressure and one for pressure aloft, whereas here both are considered in the same clustering process. 
+Comparing with the archetypal patterns set out by Rauber and the clusters identified by Erfani, Cluster 1 indicates a cyclone/anticyclone setup (Rauber pattern C). The northward shift and apparent intensification of the cyclone is striking. This is consistent with observations dating back to roughly 2000 of a northward shift in cyclone tracks, thought to be forced at least in part by increasing temperatures due to enhanced mixing ratios of atmospheric CO$_2$ \citep{mccabe2001trends} also add \citep{chang2016northern}. While becoming less frequent, these cyclones have also become more intense. These historically have also been the longest-lasting events, with 25\% of these events lasting more than 24 hours \citep{rauber2001synoptic}. 
+
+Little change seems to be observed in Clusters 2 and 3 across the two periods. Cluster 2 encapsulates Rauber patterns F and G, the topography-forced cold-air damming and trapping conditions. A similar cluster was created by Erfani. Cluster 3, which is similar to Rauber's pattern B, characterizing the classical formation of freezing rain caused at the warm front and occlusion sector of cyclones, appears to have changed little as well.\todo[size=\small]{take a closer look. There are some clear changes, esp. with northward movement of L pressure center in 2 and an eastward push of the low pressure system in 3}
+
+To investigate any changes in the contribution of each archetypal pattern to annual freezing rain totals, the prevalence of events in the 1979--1996 period is compared with that of events from the 1997--2014 period after each event has been assigned to a centroid computed from the earlier data. Figure \ref{fig:clusterchange} compares the number of freezing rain events associated with each pattern between the first and second half of the study period. 586 events were identified during the first 18-year period, and 625 events were identified during the second period, an overall increase of 6.6\%. The number of freezing rain events under Clusters 1 and 2 \todo[size=\small]{Get consistent with either naming clusters by numbers or not} rose substantially, indicating an interdecadal increase in the number of often lengthy extratropical cyclone/anticyclone-forced events (25.2\%) as well as those forced by topography in the Appalachian Mountains and eastward (13.8\%). The number of storms caused in the classic warm front/occlusion zone setup decreased 13.6\%.  The number of storms caused in the warm front/occlusion zone pattern decreased 13.6\%. 
+
+The most salient conclusion looking at this dynamical analysis as a whole was that the largest portion of increases in freezing rain occurrence stems from an archetypal synoptic weather pattern that has led to the longest and most dangerous events, as well as being the one that is most clearly tied to human influence. This fits into the observed pattern of winter storms having become larger in spatial scale and intensity over time \citep{changnon2007catastrophic}. 
+
+
+\section{Discussion and conclusion}
+Linear trends were generally consistent with predictions made in the few studies on future freezing rain activity done to date, with the northern regions showing faster-than-expected increases in freezing rain frequency. Changes in seasonal freezing rain occurrence consistent with predictions are robust at a region-wide scale, even if the magnitude of the seasonal trends are not. Several regional trends were also identified that invite further scrutiny and could be of practical use. For example, decreases in freezing rain frequency throughout the Appalachian Mountains and westward to the eastern shores of Lakes Erie and Ontario are among the most prominent trends despite not having been predicted to date. \todo[inline,size=\small]{somewhere add a bit and a reference about how winter warming is most mild in the same part of northeastern appalachia that the decreases are being seen in}
+
+The division of the time period into halves for k-means clustering analysis provided insight into recent shifts in freezing rain dynamics. The northward shift of the low pressure system depicted by Cluster 1 is a compelling sign that increased temperatures may be pushing the typical freezing rain "belt" northward. With insight from the body of climate literature connecting northward movement of North American mid-latitude storm tracks with anthropogenic influence, it appears likely that the freezing rain climatology has changed under human influence. \todo[size=\small]{add reference to northward moving winter storm tracks and emissions.} Could also include projections of reduction of extratropical cyclones for n america in \citet{chang2013cmip5}
+
+Despite possible recent intensification of freezing rain events, reports of freezing rain remain mostly ($>$80\%) of light intensity and ice accretion is chiefly a function of event duration. An indication that the archetypal pattern which causes the longest freezing rain events is becoming more prevalent is a sign that there could be real implications for decision-makers considering ice storm impacts. \todo[size=\small]{Tie in duration trends once finished with them}These findings of regional trends in the freezing rain climatology may inform next-generation hazard analyses that can help decision makers plan for future ice accretion thicknesses, such as the work done in \citet{erfani2014aggregated}.
+\todo[inline,size=\small]{This summary needs work---basically all the quantified trends aren't included here. I need a paragraph or two explicitly stating where we've found trends, what they are, where we haven't, what it means.}
+
+Opportunities exist for urban planners, power system operators, biologists, and other decision-makers to respond to the changing patterns of ice storms reported here and expected in the near future. If more widely implemented, these established measures could also broadly improve the resilience of infrastructure and ecosystems in regions that have experienced little change in ice storm frequency to date. 
+
+Focusing on the energy system, borders of ice-loading districts determined by the National Electrical Safety Code Committee could be redefined based upon updated ice recurrence intervals to reduce costs on new transmission lines being built where glaze ice accumulation has become less severe and, conversely, to improve reliability where ice storm impacts have intensified \citep{american2013minimum}. Power outages can sometimes be avoided by intentionally heating critical transmission lines with high frequency current to induce melt via dielectric heating losses \citep{bendel1981review,huneault2005combined,mccurdy2001using}. Ice-forced wind turbine curtailment can be better accounted for in financial projections and electricity markets and can potentially be minimized using cameras and recent innovations in blade heating technologies \citep{bird2014wind}. Recent work has also suggested that wind farm operators could use existing telemetry to reliably track ice accumulation on individual turbines by comparing each generator's historical power curve with a running average of its deviation \citep{davis2016ice}.
+
+TRANSPORTATION 
+transportation safety can be improved by enhancing public awareness about local changes in ice storm climatology during freezing rain events \citep{call2009assessment}; 
+
+
+Buildings and natural environments could withstand more severe glaze ice accumulation if urban planners and forest managers plant tree species that are resistant to ice accretion and prioritize canopy-thinning efforts in fragile ecosystems \citep{hauer2006trees}.
+
+Could add a bit about improving forecasts and refer to AI model by \citet{swaminathan2015modeling}
+
+\subsection{Future work}
+As the length of the record of quantitative ice accretion reports from automated ASOS freezing rain observations grows, opportunities exist to analyze ice storms in a ...... \citet{ryerson2007quantitative} (second citation, not necessary)
+Considering the observed changes in freezing rain and ice storm climatology, a detailed analysis of regional trends in overall precipitation would complement the ...... global changes in precipitation \citet{westra2013global}
+
+As with other rare and highly variable weather phenomena, more clarity will come about with the passage of time as observational time series grow longer. One particularly exciting recent development was the introduction of highly accurate ice accumulation measurements inferred from the ASOS sensor according to the empirical relation developed by \cite{ryerson2007quantitative} in all reports of freezing rain at many ASOS stations since ASOS software version 3.10 was introduced in May 2013 \citep{nws2013}. Research in the coming decades will be able to utilize this dataset alongside the longer record of freezing rain observations to more accurately predict 
+
+
+\citet{sanders2016analysis} promising model
+
+% Delete before submission:
+%\nocite{*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ACKNOWLEDGMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\acknowledgments
+The authors would like to thank the Great Lakes Integrated Sciences \& Assessments team for its support and feedback; Profs. Allison Steiner and Xianglei Huang for their input; Benjamin Bernstein and John Cortinas for their expert feedback; Benjamin Mallernee for his early work on the project; and Jennifer Bukowski for her advice on synoptic weather typing. An implementation of the seasonal Kendall trend test modified for serial dependence was obtained from Jeff Burkey via the MATLAB exchange website. ASOS data from the Integrated Surface Database were provided by NCEI. NARR data were provided by the NOAA/OAR/ESRL PSD, Boulder, Colorado, USA, via OPeNDAP at https://www.esrl.noaa.gov/psd/.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REFERENCES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Make your BibTeX bibliography by using these commands:
+\bibliographystyle{ametsoc2014}
+\bibliography{references}
 
 
 \begin{table*}[]
@@ -300,71 +405,6 @@ OH                   & Akron/Canton               & KCAK     & 15               
 \end{tabular}
 \end{table*}
 
-Figure \ref{fig:trendmap} indicates distinct regional trends. Stations along the northeastern Appalachian Mountains, the Catskills, and the Adirondacks, for example, which frequently experience topography-forced events, have experienced a consistent decrease in freezing rain event frequency, along with stations near the eastern shores of Lakes Erie and Ontario. Stations centered on Long Island, on the other hand, indicate substantial increases. 
-
-NYC note about SST: \citet{ramos2006sensitivity}
-look to \citet{cortinas2000climatology} for Great Lakes-specific stuff including SST, lake effect, surface cyclone tracks
-
-\begin{figure*}
-\centering
-\includegraphics[width=.9\textwidth]{Seasonal.PNG}
-\caption{\label{fig:seasonal} Comparison of seasonal frequency of freezing rain events between the first 21 years in the study period and the last 18 (to better coincide with the NARR-based dynamics analysis below). Red lines demarcate mean values, boxes signify 25-75\% percentiles, whiskers inner fences, and red plus signs indicate outliers. Table lists $p$-values calculated using Mann-Whitney rank sum method to test for difference in median value.}
-\end{figure*}
-\todo[size=\small]{re: figure: add Mann-Whitney p-values in their own row.}
-
-Monthly trends in freezing rain frequency averaged across the entire Great Lakes region reveal a significant monotonic trend only for March \todo[inline]{update after removing modification to MK}. A weaker hypothesis is that the average freezing rain frequency for some months has changed.\todo[inline]{[RBR25]I think this sentence needs changing.  Transition from previous sentence made more clear, perhaps?  We have, also, moved to the split time period.  This paragraph is one of our key results and clarity in transition is needed. Lead with Mann-Whitney. (reference). Mann-Whitney described earlier, we use it. Dont just have it leap out.  Weaker than what? THIS paragraph is important. Unpack it and describe it. (Matt comment: agreed, this part is very bad)} This was tested for using the Mann-Whitney test, a non-parametric counterpart to the two-sample t-test that determines whether the medians of two series are different from one another. Figure \ref{fig:seasonal} shows the frequency … and the $p$-values calculated for each month after computing the Mann-Whitney test, which independently compares the rank of all entries of the two time series for the 1976--1996 period and the 1997--2014 period. As shown, the median duration of freezing rain in the months of November and March has changed, along with the mid-winter month of January. The box-and-whisker plots suggest that the "tightening up" of the winter distribution of freezing rain occurrence, as predicted by prior studies like \citet{cheng2011possible}, has likely begun. However, all that can be said to be robust from this analysis of seasonality is that the median freezing rain frequency has changed in recent years for the months of November, January, and March, and that there has been a robust region-wide decrease in freezing rain occurrence during March.
-
-\subsection{Trends in the duration of ice storms}
-Historically, the duration over which freezing rain is observed in a location has been assumed to adequately describe the severity of the ice storm in terms of total glaze ice accumulation. Since winds must be relatively mild to maintain above-freezing surface temperatures and the latent heat .......
-
-
-\section{Trends in weather patterns during ice storms}
-An initial inspection of the temporal and spatial evolution of freezing rain---diurnally, monthly and annually as well as across the domain and at a higher, regional resolution---was carried out to look for clues regarding changes in physical mechanisms. This is difficult because of the rare and highly local nature of the events---often just a few large storms every year or so obfuscate any slower underlying changes.
-
-Although the ice storm is the topic of interest in this work because we are interested in events that pose a danger to society, such a concept is inappropriate for analysis here since ice accretion occurs at different rates on different surfaces and under different conditions, and estimation of radial accretion of ice on a cylindrical surface using variables such as wind and wet-bulb temperature has shown inconsistent results \citep{add a citation for this}. Previous studies, such as \citet{swaminathan2015modeling}, have used events which \textit{Storm Data} noted as having included freezing rain or reports of damage from ice accumulation as a starting point from which to analyze ice storms. 
-
-Therefore, freezing rain events are defined and analyzed as a proxy for ice storms in an analysis of the dynamics underlying observed changes in freezing rain frequency. A freezing rain event is defined as having begun at the first hourly report of freezing rain anywhere in the region and continuing until at least six hours has elapsed without any further reports of freezing rain across the domain of study. As a sensitivity analysis, the methods were carried out varying the minimum number of hours constituting an event between one and six and varying the maximum number of intervening hours between freezing rain reports for which reports were considered a single event between one and six. A comparison of the results revealed that although the total number of events observed was highly sensitive to the choice of both parameters, the results of the analysis of synoptic weather conditions present during storms was not.
-
-As mentioned in the introduction, synoptic conditions during ice storms can be broadly categorized into several distinct archetypal patterns, varying from those caused by extratropical cyclone-anticyclone interactions (mainly in the Midwest to southeastern Canada) to those caused mainly by orography (cold air damming and trapping throughout the Northeast Appalachian Range and along its eastern slopes). By analyzing these synoptic conditions and then classifying stations into regional groups that share similar conditions and freezing rain frequency distributions, we identify regional similarities in the dynamics driving freezing rain events.
-
-A synoptic weather typing and clustering procedure is carried out as follows:
-
-\begin{enumerate}
-\item
-For each event identified across the study region from 1976 to 2014, two anomaly maps were obtained---one of MSL pressure and one of 850 mb geopotential height---from the three-hourly NARR output closest to the middle of event occurrence. Anomalies were determined by subtracting the monthly climatology of the entire 1979--2014 period.
-\item
-The k-means clustering algorithm (with $k=3$, in accordance with \citet{erfani2012automated} and verified using silhouette plots) was applied to the anomaly maps and the resulting centroid maps were constructed. These centroid maps represent the mean pressure anomalies for each of the three storm patterns.
-\begin{itemize}
-\item
-The MSL pressure and 850 mb height anomaly maps for each event were reshaped into vectors and concatenated, creating a matrix with each row representing an event and each column representing a spatial grid cell. k-means clustering was chosen since it performed the best in \citet{erfani2012automated}'s freezing rain synoptic typing validation, outperforming hierarchical and average linkage methods.\todo[inline]{how did it "outperform"? Explain. This is vague and bad}
-\item
-Events were classified into one of three clusters and three centroid maps of MSL pressure anomaly and 850 mb height anomaly were created and analyzed.
-\item
-The clusters were compared to the archetypal patterns manually classified by \citet{rauber2001synoptic} for physical intuition.
-\end{itemize}
-\end{enumerate}
-
-To link freezing rain trends with possible changes in the meteorological forcing of events, the steps above were repeated, dividing the time record into two spans. The new centroid maps were compared to old ones to identify any changes in synoptic conditions. In addition to rerunning the k-means algorithm to create new clusters, the events in the 1997--2014 period were also classified into the original clusters created from the 1979--2014 dataset by assigning each one according to the minimum Euclidean distance between the event and the centroids. 
-
-Producing separate cluster results for each of the two periods allowed analysis of how underlying modes themselves may have changed, and binning the more recent events to the original clusters trained on the first period made it possible to investigate how the relative importance of different archetypal patterns in freezing rain formation may have shifted.
-
-\subsection{Results of dynamics analysis}
-
-\begin{figure*}
-\centering
-\includegraphics[width=1\textwidth]{Cluster_Centroids.png}
-\caption{\label{fig:centroids} Centroid maps of cluster analysis  used to create three archetypal storm patterns. Solid lines refer to MSL pressure anomalies and dotted lines demarcate 850 mb geopotential height anomalies. Color bar shows anomalies, not absolute pressures.}
-\end{figure*}
-
-\subsection{Classification of storms into three archetypal patterns}
-The k-means clustering algorithm used to group storms into three archetypal patterns resulted in the centroid pressure and geopotential height anomaly maps shown in Figure \ref{fig:centroids}. \citet{erfani2012automated} produced average anomaly maps of Rauber's manually selected groups that were used here for comparison. Table \ref{archetypalpatterns} summarizes these comparisons and key statistics for each cluster.
-
-The first cluster (Figure \ref{fig:centroids}A) is similar to Rauber's pattern B, describing freezing rain events that occur at the occlusion sector of warm fronts, as well as Rauber's pattern G, describing cold air trapping. The former occurs just north of the 0\degree C surface isotherm when warm air overruns a subfreezing surface layer. Cold air trapping occurs when approaching continental cyclones advect warm air over the Appalachians, trapping cold air in valleys at the surface and leading to freezing rain. Both MSL pressure and 850 mb anomalies closely resemble those plotted by \citet{rauber2001synoptic}, where  8.1\% of freezing rain events between 1970-1994 were classified as being caused by these conditions. \todo[size=\small]{compare with \% from this study}
-
-The second cluster (Figure \ref{fig:centroids}B) represents the extratropical cyclone-forced storm that most often affects the Midwestern U.S. and especially its southern region (Rauber pattern C). Storms that take on this pattern were identified by Rauber to be some of the longest in duration and most damaging throughout the Midwestern U.S., due to their high-pressure gradients and the higher winds that result. \todo[size=\small]{compare with \% from this study}
-
-The third cluster (Figure \ref{fig:centroids}C) is similar to Rauber's patterns D and E. The D group refers to systems that produce freezing rain in the western quadrant of arctic high-pressure anomalies interacting with warmer air from the Southeast. The E pattern describes cold air damming, synoptic conditions which trigger freezing rain when arctic air masses are dammed against the eastern slopes of the Appalachian range and warmer air moving in as a result of easterly flow from the Atlantic overtakes it. Rauber identified this archetypal pattern as contributing to 5.7\% of all storms and many of the longest, with a quarter of events lasting longer than 12 hours.\todo[size=\small]{compare with \% from this study} Freezing rain from these systems would be expected in southern Quebec and Ontario, in the freezing rain hotspots of Ottawa and Montreal and throughout the Appalachian Range. \todo[inline]{rework this with new clsuters andadd discussion of table data}
-
 \begin{table*}
 \label{archetypalpatterns}
 \caption{Archetypal patterns of synoptic conditions during freezing rain events as determined through k-means clustering.}
@@ -380,13 +420,24 @@ Cluster & Description                 & Similar to Rauber patterns & No. of even
 \end{table*}
 
 
-\subsection{Changes in meteorological forcing}
-Changes in meteorological forcing were investigated by separately clustering the first and second half of the 36-year time period of NARR coverage and examining the changes in centroid anomaly maps from the former to the  latter half of observations. While there are close similarities with the clusters identified in the analysis of regions above, several notable differences are observed for the clusters as computed for the two separate time periods and for the clusters as trained upon the first half of the time period later in this section. As such, the clusters are numbered to highlight that distinction. The results are depcited in Figure \ref{fig:clusters}.
+\begin{figure*}
+\centering
+\includegraphics[width=1.0\textwidth]{FZRA_trend_maps.png}
+\caption{\label{fig:trendmap}Elevation maps of the the Great Lakes region summarizing linear trends in total annual hours of freezing rain observed at each station from 1976 to 2014. Representative, or "typical" total annual hours of freezing rain calculated using the Theil-Sen slope estimation method are shown for first year (top left) and last year (top right) of the study period. Trends are depicted on a decadal scale at bottom. Filled circles at each observing station are scaled by $1 - p$ and Xs denote stations where the modified Mann-Kendall test indicates a monotonic trend at the $p<0.05$ level.}
+\end{figure*}
 
-\citet{erfani2012automated} found that three clusters were appropriate to describe the significantly different archetypal patterns causing freezing rain by analyzing wind and precipitation variances for different values of $k$. Their analysis, however, carried out two different clustering algorithms, one for MSL pressure and one for pressure aloft, whereas here both are considered in the same clustering process. 
-Comparing with the archetypal patterns set out by Rauber and the clusters identified by Erfani, Cluster 1 indicates a cyclone/anticyclone setup (Rauber pattern C). The northward shift and apparent intensification of the cyclone is striking. This is consistent with observations dating back to roughly 2000 of a northward shift in cyclone tracks, thought to be forced at least in part by increasing temperatures due to enhanced mixing ratios of atmospheric CO$_2$ \citep{mccabe2001trends} also add \citep{chang2016northern}. While becoming less frequent, these cyclones have also become more intense. These historically have also been the longest-lasting events, with 25\% of these events lasting more than 24 hours \citep{rauber2001synoptic}. 
+\begin{figure*}
+\centering
+\includegraphics[width=.9\textwidth]{Seasonal.PNG}
+\caption{\label{fig:seasonal} Comparison of seasonal frequency of freezing rain events between the first 21 years in the study period and the last 18 (to better coincide with the NARR-based dynamics analysis below). Red lines demarcate mean values, boxes signify 25-75\% percentiles, whiskers inner fences, and red plus signs indicate outliers. Table lists $p$-values calculated using Mann-Whitney rank sum method to test for difference in median value.}
+\end{figure*}
+\todo[size=\small]{re: figure: add Mann-Whitney p-values in their own row.}
 
-Little change seems to be observed in Clusters 2 and 3 across the two periods. Cluster 2 encapsulates Rauber patterns F and G, the topography-forced cold-air damming and trapping conditions. A similar cluster was created by Erfani. Cluster 3, which is similar to Rauber's pattern B, characterizing the classical formation of freezing rain caused at the warm front and occlusion sector of cyclones, appears to have changed little as well.\todo[size=\small]{take a closer look. There are some clear changes, esp. with northward movement of L pressure center in 2 and an eastward push of the low pressure system in 3}
+\begin{figure*}
+\centering
+\includegraphics[width=1\textwidth]{Cluster_Centroids.png}
+\caption{\label{fig:centroids} Centroid maps of cluster analysis  used to create three archetypal storm patterns. Solid lines refer to MSL pressure anomalies and dotted lines demarcate 850 mb geopotential height anomalies. Color bar shows anomalies, not absolute pressures.}
+\end{figure*}
 
 \begin{figure*}
 \centering
@@ -399,59 +450,6 @@ Little change seems to be observed in Clusters 2 and 3 across the two periods. C
 \includegraphics[width=0.5\textwidth]{Storm_Pattern_Change.png}
 \caption{\label{fig:clusterchange} Timeline showing all events as classified into each of three clusters as calculated for the 1979--1996 period (top) and change in classification of events from the 1979--1996 period to the 1997--2014 period where the latter period is classified according to the centroids trained on the earlier period (bottom).}
 \end{figure}
-
-To investigate any changes in the contribution of each archetypal pattern to annual freezing rain totals, the prevalence of events in the 1979--1996 period is compared with that of events from the 1997--2014 period after each event has been assigned to a centroid computed from the earlier data. Figure \ref{fig:clusterchange} compares the number of freezing rain events associated with each pattern between the first and second half of the study period. 586 events were identified during the first 18-year period, and 625 events were identified during the second period, an overall increase of 6.6\%. The number of freezing rain events under Clusters 1 and 2 \todo[size=\small]{Get consistent with either naming clusters by numbers or not} rose substantially, indicating an interdecadal increase in the number of often lengthy extratropical cyclone/anticyclone-forced events (25.2\%) as well as those forced by topography in the Appalachian Mountains and eastward (13.8\%). The number of storms caused in the classic warm front/occlusion zone setup decreased 13.6\%.  The number of storms caused in the warm front/occlusion zone pattern decreased 13.6\%. 
-
-The most salient conclusion looking at this dynamical analysis as a whole was that the largest portion of increases in freezing rain occurrence stems from an archetypal synoptic weather pattern that has led to the longest and most dangerous events, as well as being the one that is most clearly tied to human influence. This fits into the observed pattern of winter storms having become larger in spatial scale and intensity over time \citep{changnon2007catastrophic}. 
-
-
-\section{Discussion and conclusion}
-Linear trends were generally consistent with predictions made in the few studies on future freezing rain activity done to date, with the northern regions showing faster-than-expected increases in freezing rain frequency. Changes in seasonal freezing rain occurrence consistent with predictions are robust at a region-wide scale, even if the magnitude of the seasonal trends are not. Several regional trends were also identified that invite further scrutiny and could be of practical use. For example, decreases in freezing rain frequency throughout the Appalachian Mountains and westward to the eastern shores of Lakes Erie and Ontario are among the most prominent trends despite not having been predicted to date. \todo[inline,size=\small]{somewhere add a bit and a reference about how winter warming is most mild in the same part of northeastern appalachia that the decreases are being seen in}
-
-The division of the time period into halves for k-means clustering analysis provided insight into recent shifts in freezing rain dynamics. The northward shift of the low pressure system depicted by Cluster 1 is a compelling sign that increased temperatures may be pushing the typical freezing rain "belt" northward. With insight from the body of climate literature connecting northward movement of North American mid-latitude storm tracks with anthropogenic influence, it appears likely that the freezing rain climatology has changed under human influence. \todo[size=\small]{add reference to northward moving winter storm tracks and emissions.} Could also include projections of reduction of extratropical cyclones for n america in \citet{chang2013cmip5}
-
-Despite possible recent intensification of freezing rain events, reports of freezing rain remain mostly ($>$80\%) of light intensity and ice accretion is chiefly a function of event duration. An indication that the archetypal pattern which causes the longest freezing rain events is becoming more prevalent is a sign that there could be real implications for decision-makers considering ice storm impacts. \todo[size=\small]{Tie in duration trends once finished with them}These findings of regional trends in the freezing rain climatology may inform next-generation hazard analyses that can help decision makers plan for future ice accretion thicknesses, such as the work done in \citet{erfani2014aggregated}.
-\todo[inline,size=\small]{This summary needs work---basically all the quantified trends aren't included here. I need a paragraph or two explicitly stating where we've found trends, what they are, where we haven't, what it means.}
-
-Opportunities exist for urban planners, power system operators, biologists, and other decision-makers to respond to the changing patterns of ice storms reported here and expected in the near future. If more widely implemented, these established measures could also broadly improve the resilience of infrastructure and ecosystems in regions that have experienced little change in ice storm frequency to date. 
-
-Focusing on the energy system, borders of ice-loading districts determined by the National Electrical Safety Code Committee could be redefined based upon updated ice recurrence intervals to reduce costs on new transmission lines being built where glaze ice accumulation has become less severe and, conversely, to improve reliability where ice storm impacts have intensified \citep{american2013minimum}. Power outages can sometimes be avoided by intentionally heating critical transmission lines with high frequency current to induce melt via dielectric heating losses \citep{bendel1981review,huneault2005combined,mccurdy2001using}. Ice-forced wind turbine curtailment can be better accounted for in financial projections and electricity markets and can potentially be minimized using cameras and recent innovations in blade heating technologies \citep{bird2014wind}. Recent work has also suggested that wind farm operators could use existing telemetry to reliably track ice accumulation on individual turbines by comparing each generator's historical power curve with a running average of its deviation \citep{davis2016ice}.
-
-TRANSPORTATION 
-transportation safety can be improved by enhancing public awareness about local changes in ice storm climatology during freezing rain events \citep{call2009assessment}; 
-
-
-Buildings and natural environments could withstand more severe glaze ice accumulation if urban planners and forest managers plant tree species that are resistant to ice accretion and prioritize canopy-thinning efforts in fragile ecosystems \citep{hauer2006trees}.
-
-Could add a bit about improving forecasts and refer to AI model by \citet{swaminathan2015modeling}
-
-\subsection{Future work}
-As the length of the record of quantitative ice accretion reports from automated ASOS freezing rain observations grows, opportunities exist to analyze ice storms in a ...... \citet{ryerson2007quantitative} (second citation, not necessary)
-Considering the observed changes in freezing rain and ice storm climatology, a detailed analysis of regional trends in overall precipitation would complement the ...... global changes in precipitation \citet{westra2013global}
-
-As with other rare and highly variable weather phenomena, more clarity will come about with the passage of time as observational time series grow longer. One particularly exciting recent development was the introduction of highly accurate ice accumulation measurements inferred from the ASOS sensor according to the empirical relation developed by \cite{ryerson2007quantitative} in all reports of freezing rain at many ASOS stations since ASOS software version 3.10 was introduced in May 2013 \citep{nws2013}. Research in the coming decades will be able to utilize this dataset alongside the longer record of freezing rain observations to more accurately predict 
-
-
-\citet{sanders2016analysis} promising model
-
-% Delete before submission:
-%\nocite{*}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ACKNOWLEDGMENTS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-\acknowledgments
-The authors would like to thank the Great Lakes Integrated Sciences \& Assessments team for its support and feedback; Profs. Allison Steiner and Xianglei Huang for their input; Benjamin Bernstein and John Cortinas for their expert feedback; Benjamin Mallernee for his early work on the project; and Jennifer Bukowski for her advice on synoptic weather typing. An implementation of the seasonal Kendall trend test modified for serial dependence was obtained from Jeff Burkey via the MATLAB exchange website. ASOS data from the Integrated Surface Database were provided by NCEI. NARR data were provided by the NOAA/OAR/ESRL PSD, Boulder, Colorado, USA, via OPeNDAP at https://www.esrl.noaa.gov/psd/.  
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% REFERENCES
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Make your BibTeX bibliography by using these commands:
-\bibliographystyle{ametsoc2014}
-\bibliography{references}
-
 
 \end{document}
 
