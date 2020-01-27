@@ -41,6 +41,7 @@
 \usepackage[colorinlistoftodos]{todonotes} %% For comments that will show in the pdf
 \usepackage{gensymb} %%for degree symbols mainly
 
+
 %% Delete before submission:
 %\usepackage{refcheck}
 
@@ -49,6 +50,7 @@
 \usepackage{multirow}
 \usepackage[normalem]{ulem}
 \useunder{\uline}{\ul}{}
+\usepackage{lscape} %%for landscape table
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -285,123 +287,153 @@ The authors would like to thank the Great Lakes Integrated Sciences \& Assessmen
 \bibliography{references}
 
 
-\begin{table*}[]
-\centering
-%\begin{tabular}{cllrrr}
-\begin{tabular}{p{0.05\linewidth}llrrr}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage[normalem]{ulem}
+% \useunder{\uline}{\ul}{}
+\begin{landscape}
+\begin{table}[]
+\begin{tabular}{cllrrrrrrr}
 \hline
-\hline
-\multicolumn{1}{l}{} &                            &          & \multicolumn{3}{c}{Annual Average}                           \\ \cline{4-6} 
-State or Province      & City                       & ICAO ID & Hrs yr$^{-1}$ & Trend (Hrs yr$^{-1}$ decade$^{-1}$) & p \\ \hline
-\multirow{7}{*}{IA}  & Burlington                 & KBRL     & 10                       & 1.97           & 0.12     \\
-                     & Cedar Rapids               & KCID     & 8                        & 0.43           & 0.65     \\
-                     & Des Moines                 & KDSM     & 7                        & -0.71          & 0.42     \\
-                     & Mason City                 & KMCW     & 9                        & 1.67           & 0.13     \\
-                     & Ottumwa                    & KOTM     & 9                        & 0.54           & 0.48     \\
-                     & Sioux City                 & KSUX     & 9                        & 1.90           & 0.08     \\
-                     & Waterloo                   & KALO     & 8                        & -1.15          & 0.28     \\
-\hline
-\multirow{10}{*}{IL} & Champaign/Urbana           & KCMI     & 9                        & 0.65           & 0.29     \\
-                     & Chicago (DuPage)           & KDPA     & 6                        & 1.91           & 0.05     \\
-                     & Chicago (Midway)           & KMDW     & 4                        & 0.00           & 0.68     \\
-                     & Chicago (O'Hare)           & KORD     & 5                        & -0.45          & 0.34     \\
-                     & Decatur                    & KDEC     & 10                       & 0.02           & 1.00     \\
-                     & Moline                     & KMLI     & 8                        & -0.66          & 0.51     \\
-                     & Peoria                     & KPIA     & 9                        & -0.53          & 0.66     \\
-                     & Quincy                     & KUIN     & 12                       & -0.40          & 0.76     \\
-                     & Rockford                   & KRFD     & 8                        & -0.39          & 0.57     \\
-                     & Springfield                & KSPI     & 11                       & -2.00          & -999.00  \\
-\hline
-\multirow{5}{*}{IN}  & Evansville                 & KEVV     & 7                        & 0.00           & 1.00     \\
-                     & Fort Wayne                 & KFWA     & 13                       & 0.61           & 0.35     \\
-                     & Indianapolis               & KIND     & 9                        & -1.05          & 0.32     \\
-                     & Lafayette                  & KLAF     & 6                        & -1.02          & 0.18     \\
-                     & South Bend                 & KSBN     & 7                        & -1.60          & 0.13     \\
-\hline
-\multirow{17}{*}{MI} & Alpena                     & KAPN     & 6                        & -0.78          & 0.28     \\
-                     & Battle Creek               & KBTL     & 8                        & 0.49           & 0.55     \\
-                     & Detroit (Coleman A. Young) & KDET     & 3                        & 0.01           & 0.69     \\
-                     & Detroit (Wayne)            & KDTW     & 10                       & -1.87          & 0.00     \\
-                     & Detroit (Willow Run)       & KYIP     & 7                        & 0.59           & 0.28     \\
-                     & Flint                      & KFNT     & 10                       & -0.46          & 0.58     \\
-                     & Grand Rapids               & KGRR     & 13                       & 0.79           & 0.52     \\
-                     & Hancock                    & KCMX     & 7                        & 0.62           & 0.53     \\
-                     & Jackson                    & KJXN     & 8                        & -0.99          & 0.18     \\
-                     & Kalamazoo                  & KAZO     & 6                        & 1.02           & 0.36     \\
-                     & Lansing                    & KLAN     & 14                       & -0.43          & 0.77     \\
-                     & Muskegon                   & KMKG     & 12                       & -0.62          & 0.53     \\
-                     & Pellston                   & KPLN     & 9                        & -0.52          & 0.45     \\
-                     & Pontiac                    & KPTK     & 7                        & -0.98          & 0.24     \\
-                     & Saginaw                    & KMBS     & 10                       & 0.39           & 0.54     \\
-                     & Sault Ste. Marie           & KANJ     & 7                        & 0.80           & 0.38     \\
-                     & Traverse City              & KTVC     & 5                        & -0.31          & 0.62     \\
-\hline
-\multirow{7}{*}{MN}  & Alexandria                 & KAXN     & 5                        & -0.43          & 0.41     \\
-                     & Duluth                     & KDLH     & 8                        & -0.26          & 0.54     \\
-                     & Hibbing                    & KHIB     & 6                        & 0.05           & 0.84     \\
-                     & International Falls        & KINL     & 6                        & 1.15           & 0.04     \\
-                     & Minneapolis/St. Paul       & KMSP     & 7                        & 0.00           & 0.86     \\
-                     & Redwood Falls              & KRWF     & 3                        & 0.83           & 0.22     \\
-                     & Rochester                  & KRST     & 17                       & 3.76           & -999.00  \\
-\hline
-\multirow{15}{*}{NY} & Albany                     & KALB     & 18                       & -2.62          & 0.13     \\
-                     & Binghamton                 & KBGM     & 23                       & -3.33          & 0.02     \\
-                     & Buffalo                    & KBUF     & 12                       & -2.99          & 0.02     \\
-                     & Elmira/Corning             & KELM     & 12                       & -0.57          & 0.69     \\
-                     & Glens Falls                & KGFL     & 18                       & -4.61          & 0.01     \\
-                     & Islip                      & KISP     & 4                        & 1.69           & 0.01     \\
-                     & Massena                    & KMSS     & 26                       & -0.80          & 0.73     \\
-                     & New York (JFK)             & KJFK     & 3                        & 1.27           & 0.00     \\
-                     & New York (La Guardia)      & KLGA     & 3                        & 1.19           & 0.06     \\
-                     & Niagara Falls              & KIAG     & 14                       & -1.69          & 0.16     \\
-                     & Poughkeepsie               & KPOU     & 12                       & -1.19          & 0.16     \\
-                     & Rochester                  & KROC     & 12                       & -1.67          & 0.18     \\
-                     & Syracuse                   & KSYR     & 16                       & -2.89          & 0.01     \\
-                     & Watertown                  & KART     & 14                       & -0.68          & 0.74     \\
-                     & White Plains               & KHPN     & 7                        & 1.05           & 0.51     \\
-OH                   & Akron/Canton               & KCAK     & 15                       & 0.01           & 0.90     \\
-\hline
-\multirow{8}{*}{OH}  & Cincinnati                 & KLUK     & 7                        & 1.43           & 0.09     \\
-                     & Cleveland                  & KCLE     & 9                        & -0.46          & 0.33     \\
-                     & Columbus                   & KCMH     & 9                        & 1.14           & 0.04     \\
-                     & Dayton                     & KDAY     & 15                       & -1.22          & 0.43     \\
-                     & Findlay                    & KFDY     & 11                       & -0.23          & -999.00  \\
-                     & Toledo                     & KTOL     & 13                       & -2.57          & 0.08     \\
-                     & Youngstown                 & KYNG     & 17                       & 4.45           & 0.03     \\
-                     & Zanesville                 & KZZV     & 8                        & 1.03           & 0.09     \\
-\hline
-\multirow{9}{*}{ON}  & Gore Bay                   & CYZE     & 9                        & -0.01          & 0.90     \\
-                     & Kapuskasing                & CYYU     & 11                       & 2.09           & 0.00     \\
-                     & North Bay                  & CYYB     & 19                       & -0.09          & 0.77     \\
-                     & Sault Ste. Marie           & CYAM     & 8                        & -0.40          & 0.58     \\
-                     & Sudbury                    & CYSB     & 24                       & -0.16          & 0.88     \\
-                     & Thunder Bay                & CYQT     & 5                        & 0.60           & 0.38     \\
-                     & Timmins                    & CYTS     & 14                       & 3.03           & 0.02     \\
-                     & Wiarton                    & CYVV     & 10                       & -2.79          & 0.00     \\
-                     & Windsor                    & CYQG     & 10                       & -1.54          & 0.20     \\
-\hline
-\multirow{9}{*}{PA}  & Allentown                  & KABE     & 20                       & -1.43          & 0.49     \\
-                     & Altoona                    & KAOO     & 20                       & -5.56          & 0.01     \\
-                     & Bradford                   & KBFD     & 21                       & -2.45          & 0.15     \\
-                     & DuBois                     & KDUJ     & 21                       & -2.72          & 0.24     \\
-                     & Erie                       & KERI     & 12                       & -0.93          & 0.50     \\
-                     & Harrisburg                 & KMDT     & 13                       & 2.83           & 0.02     \\
-                     & Philadelphia               & KPHL     & 7                        & 0.00           & 0.86     \\
-                     & Pittsburgh                 & KPIT     & 10                       & 0.11           & 0.78     \\
-                     & Williamsport               & KIPT     & 10                       & -2.44          & 0.26     \\
-\hline
-\multirow{3}{*}{QC}  & Ottawa                     & CYDH     & 32                       & -2.83          & 0.11     \\
-                     & Rouyn-Noranda              & CYUY     & 12                       & 3.03           & 0.01     \\
-                     & Val-d'Or                   & CYVO     & 13                       & 1.80           & 0.17     \\
-\hline
-\multirow{6}{*}{WI}  & Eau Claire                 & KEAU     & 6                        & -0.42          & 0.51     \\
-                     & Green Bay                  & KGRB     & 7                        & -0.01          & 0.90     \\
-                     & La Crosse                  & KLSE     & 5                        & 0.00           & 0.73     \\
-                     & Madison                    & KMSN     & 8                        & 0.00           & 0.92     \\
-                     & Milwaukee                  & KMKE     & 6                        & -1.25          & 0.03     \\
-                     & Wausau                     & KAUW     & 10                       & 1.50           & 0.07     \\ \hline
+ &
+   &
+   &
+  \multicolumn{1}{l}{} &
+  \multicolumn{2}{c}{\begin{tabular}[c]{@{}c@{}}Decadal Trend in Frequency \\ (hrs/yr/decade)\end{tabular}} &
+  \multicolumn{2}{c}{\begin{tabular}[c]{@{}c@{}}Decadal Trend in Duration \\ (hrs/event/decade)\end{tabular}} &
+  \multicolumn{2}{c}{\begin{tabular}[c]{@{}c@{}}Decadal Trend in Intensity \\ (\% of reports light precip./decade)\end{tabular}} \\ \cline{5-10} 
+State or Province &
+  City &
+  ICAO ID &
+  Median hrs/yr &
+  1976--2014 &
+  1996--2014 &
+  1976--2014 &
+  1996--2014 &
+  1976--2014 &
+  1996--2014 \\ \hline
+\multirow{7}{*}{IA}  & Burlington                 & KBRL & 10   & 2     & 4.9   & -0.2* & 0    & -1.8\%* & -1.8\%   \\
+                     & Cedar Rapids               & KCID & 8    & 0.4   & -0.1  & 0     & 0    & 0\%     & 0\%      \\
+                     & Des Moines                 & KDSM & 7    & -0.7  & 0     & 0     & 0    & 0\%     & 0\%      \\
+                     & Mason City                 & KMCW & 9    & 1.7   & -3.6  & 0     & 0    & 0\%     & 0\%      \\
+                     & Ottumwa                    & KOTM & 9    & 0.5   & -4.8  & 0     & 0    & 0\%     & 0\%      \\
+                     & Sioux City                 & KSUX & 9    & 1.9   & -3.3  & 0     & 0    & 0\%     & 0\%      \\
+                     & Waterloo                   & KALO & 8    & -1.2  & -1.3  & 0     & 0    & 0\%     & 0\%      \\ \cline{2-10} 
+                     &                            &      & 6    & 0.7   & 1.5   & 0     & 0    & 0\%     & 0\%      \\ \hline
+\multirow{10}{*}{IL} & Champaign/Urbana           & KCMI & 9    & 0.7   & 4.9   & 0     & 0    & -3.3\%  & 0\%      \\
+                     & Chicago (DuPage)           & KDPA & 6    & 1.9   & 2.1   & 0     & 0    & 0\%*    & 0\%      \\
+                     & Chicago (Midway)           & KMDW & 4    & 0     & -0.8  & 0     & 0    & 0\%     & 0\%      \\
+                     & Chicago (O'Hare)           & KORD & 5    & -0.5  & 8.4*  & 0     & 0    & 0\%     & 0\%      \\
+                     & Decatur                    & KDEC & 10   & 0     & -2.4  & 0     & 0    & 0\%*    & 0\%      \\
+                     & Moline                     & KMLI & 8    & -0.7  & 0     & 0     & 0    & 0\%     & 0\%      \\
+                     & Peoria                     & KPIA & 9    & -0.5  & 0.5   & 0     & 0    & 0\%*    & 0\%      \\
+                     & Quincy                     & KUIN & 12   & -0.4  & 0     & 0     & 0    & 0\%*    & 0\%      \\
+                     & Rockford                   & KRFD & 8    & -0.4  & 1.6   & 0     & 0    & 0\%     & 0\%      \\
+                     & Springfield                & KSPI & 11   & -2    & 0     & 0     & 0    & -1.1\%* & -0.7\%   \\ \cline{2-10} 
+                     &                            &      & 9.5  & 1.8   & -0.6  & 0     & 0    & 0\%     & 0\%      \\ \hline
+\multirow{5}{*}{IN}  & Evansville                 & KEVV & 7    & 0     & -2.2  & 0     & 0    & 0\%*    & -14.7\%  \\
+                     & Fort Wayne                 & KFWA & 13   & 0.6   & -0.2  & 0     & 0    & 0\%     & 11.9\%*  \\
+                     & Indianapolis               & KIND & 9    & -1.1  & 0     & 0     & 0    & -2\%*   & 0\%      \\
+                     & Lafayette                  & KLAF & 6    & -1    & -3.7  & 0     & 0    & 0\%     & 0\%      \\
+                     & South Bend                 & KSBN & 7    & -1.6  & 5*    & 0     & 0    & 0\%     & 0\%      \\ \cline{2-10} 
+                     &                            &      & 11   & -0.7  & 0     & 0     & 0    & -1.6\%* & -1.1\%   \\ \hline
+\multirow{17}{*}{MI} & Alpena                     & KAPN & 6    & -0.8  & -3.3  & 0     & 0    & 0\%*    & 0\%      \\
+                     & Battle Creek               & KBTL & 8    & 0.5   & 1.1   & -0.2* & 0*   & 0\%*    & -10.4\%* \\
+                     & Detroit (Coleman A. Young) & KDET & 3    & 0     & -1.9  & 0     & 0    & 0\%     & 0\%      \\
+                     & Detroit (Wayne)            & KDTW & 10   & -1.9* & 1.1   & 0     & 0    & 0\%*    & 0\%      \\
+                     & Detroit (Willow Run)       & KYIP & 7    & 0.6   & 1.3   & 0     & 0    & 0\%     & 5.3\%    \\
+                     & Flint                      & KFNT & 10   & -0.5  & 1     & 0*    & 0    & 0\%     & 0\%      \\
+                     & Grand Rapids               & KGRR & 13   & 0.8   & 2.5   & 0     & 0    & 0\%     & 0\%      \\
+                     & Hancock                    & KCMX & 7    & 0.6   & 6.9   & 0     & 0    & 0\%     & 0\%      \\
+                     & Jackson                    & KJXN & 8    & -1    & 0     & 0     & 0    & 0\%*    & -9.9\%*  \\
+                     & Kalamazoo                  & KAZO & 6    & 1     & -8.6* & 0     & 0    & 0\%     & 0\%      \\
+                     & Lansing                    & KLAN & 14   & -0.4  & -1    & 0*    & 0    & 0\%     & 0\%      \\
+                     & Muskegon                   & KMKG & 12   & -0.6  & 1.6   & 0     & 0    & 0\%     & 0\%      \\
+                     & Pellston                   & KPLN & 9    & -0.5  & -4.6  & 0     & 0    & -0.5\%* & -6.6\%   \\
+                     & Pontiac                    & KPTK & 7    & -1    & -1.7  & 0     & 0.4  & 0\%     & 0\%      \\
+                     & Saginaw                    & KMBS & 10   & 0.4   & 0     & 0     & 0    & 0\%     & 0\%      \\
+                     & Sault Ste. Marie           & KANJ & 7    & 0.8   & -2.7  & 0     & 0    & 0\%*    & -7.9\%*  \\
+                     & Traverse City              & KTVC & 5    & -0.3  & 1.8   & 0     & 0    & 0\%     & 0\%      \\ \cline{2-10} 
+                     &                            &      & 14   & 0.8   & 0.3   & 0     & 0    & 0\%*    & 0\%      \\ \hline
+\multirow{7}{*}{MN}  & Alexandria                 & KAXN & 5    & -0.4  & -1.7  & 0     & 0    & 0\%     & 0\%      \\
+                     & Duluth                     & KDLH & 8    & -0.3  & -4    & 0     & 0    & 0\%     & 0\%      \\
+                     & Hibbing                    & KHIB & 6    & 0     & 9.2   & 0     & 0    & 0\%     & 0\%      \\
+                     & International Falls        & KINL & 6    & 1.2*  & -1.7  & 0     & 0    & 0\%     & 0\%      \\
+                     & Minneapolis/St. Paul       & KMSP & 7    & 0     & -5.7* & 0     & 0    & 0\%     & 0\%      \\
+                     & Redwood Falls              & KRWF & 3    & 0.8   & -5.5  & 0     & 0    & 0\%     & 0\%      \\
+                     & Rochester                  & KRST & 17   & 3.8   & 3.3   & 0     & -0.4 & 0\%*    & -2.7\%   \\ \cline{2-10} 
+                     &                            &      & 1    & -0.8  & -8.7* & 0     & 0    & 0\%*    & 0\%      \\ \hline
+\multirow{15}{*}{NY} & Albany                     & KALB & 18   & -2.6  & -1.7  & 0     & 0    & 0\%     & 0\%      \\
+                     & Binghamton                 & KBGM & 23   & -3.3* & -9.4  & 0     & 0    & -3.3\%* & -1.6\%   \\
+                     & Buffalo                    & KBUF & 12   & -3*   & -4.1  & 0     & 0    & 0\%     & 2.1\%    \\
+                     & Elmira/Corning             & KELM & 12   & -0.6  & 0     & 0     & 0    & 0\%*    & 0\%      \\
+                     & Glens Falls                & KGFL & 18   & -4.6* & -3.9  & 0     & 0    & 0\%     & -8.3\%   \\
+                     & Islip                      & KISP & 4    & 1.7*  & -3.3  & 0     & 0    & 0\%     & 0\%      \\
+                     & Massena                    & KMSS & 26   & -0.8  & -10   & 0     & -0.4 & -4.9\%* & -4.5\%   \\
+                     & New York (JFK)             & KJFK & 3    & 1.3*  & -2.2  & 0     & 0    & 0\%     & 0\%      \\
+                     & New York (La Guardia)      & KLGA & 3    & 1.2   & -7.7  & 0     & 0.5  & 0\%     & 0\%      \\
+                     & Niagara Falls              & KIAG & 14   & -1.7  & 0     & 0     & 0    & 0\%     & 0\%      \\
+                     & Poughkeepsie               & KPOU & 12   & -1.2  & -4.5  & 0     & 0.6* & -0.6\%* & -3.1\%   \\
+                     & Rochester                  & KROC & 12   & -1.7  & 3.7   & 0     & 1.1  & 0\%     & 0\%      \\
+                     & Syracuse                   & KSYR & 16   & -2.9* & -4.1  & 0     & 0    & 0\%     & 0\%      \\
+                     & Watertown                  & KART & 14   & -0.7  & 1.8   & 0     & 0    & -5.6\%* & -5.1\%*  \\
+                     & White Plains               & KHPN & 7    & 1     & -2.2  & -0.4* & 0    & 0\%*    & -4.5\%   \\ \cline{2-10} 
+                     &                            &      & 19   & 0     & 1.9   & -0.2* & 0    & 0\%*    & -2.9\%   \\ \hline
+\multirow{9}{*}{OH}  & Akron/Canton               & KCAK & 15   & 0     & -3.6  & -0.3* & 0    & 0\%*    & 0\%      \\
+                     & Cincinnati                 & KLUK & 7    & 1.4   & -4.9  & 0     & 0    & 0\%     & -10\%    \\
+                     & Cleveland                  & KCLE & 9    & -0.5  & 1.8   & 0     & 0    & 0\%     & 0\%      \\
+                     & Columbus                   & KCMH & 9    & 1.1*  & -0.5  & -0.2* & 0    & 0\%*    & 0\%      \\
+                     & Dayton                     & KDAY & 15   & -1.2  & 7.8*  & 0     & 0    & 0\%*    & 0\%      \\
+                     & Findlay                    & KFDY & 11   & -0.2  & -1.6  & 0     & 0    & 0\%*    & 0\%      \\
+                     & Toledo                     & KTOL & 13   & -2.6  & -2.5  & 0     & 0    & 0\%*    & 0\%      \\
+                     & Youngstown                 & KYNG & 17   & 4.5*  & 0.2   & 0     & 0    & 0\%*    & 4.8\%    \\
+                     & Zanesville                 & KZZV & 8    & 1     & 1.8   & 0     & 0    & 0\%     & -8\%     \\ \cline{2-10} 
+                     &                            &      & 7    & -1.4  & 8.4*  & 0     & 0    & 0\%*    & -1.8\%   \\ \hline
+\multirow{9}{*}{ON}  & Gore Bay                   & CYZE & 9    & 0     & -3.1  & 0     & 0    & -8.9\%* & -10.1\%  \\
+                     & Kapuskasing                & CYYU & 11   & 2.1*  & -1.6  & 0     & 0    & 0\%*    & 0\%*     \\
+                     & North Bay                  & CYYB & 19   & -0.1  & -4.3  & -0.3* & 0    & 0\%     & 0\%      \\
+                     & Sault Ste. Marie           & CYAM & 8    & -0.4  & -1.7  & -0.3* & 0    & 0\%     & 0\%      \\
+                     & Sudbury                    & CYSB & 24   & -0.2  & -0.1  & 0     & 0*   & 0\%     & 0\%      \\
+                     & Thunder Bay                & CYQT & 5    & 0.6   & 11.7  & 0     & 0.3  & 0\%     & 0\%      \\
+                     & Timmins                    & CYTS & 14   & 3*    & -0.1  & 0     & 0    & 0\%     & 0\%      \\
+                     & Wiarton                    & CYVV & 10   & -2.8* & 2.7   & 0     & 0    & 0\%     & 0\%      \\
+                     & Windsor                    & CYQG & 10   & -1.5  & 0.9   & 0     & 0.6* & 0\%     & 0\%      \\ \cline{2-10} 
+                     &                            &      & 11   & -0.2  & 1.9   & 0     & 0    & 0\%*    & 0\%      \\ \hline
+\multirow{9}{*}{PA}  & Allentown                  & KABE & 20   & -1.4  & 3.1   & 0*    & 0    & -6.4\%* & -11.2\%  \\
+                     & Altoona                    & KAOO & 20   & -5.6* & -12   & 0     & 0    & -6.2\%* & -15.6\%* \\
+                     & Bradford                   & KBFD & 21   & -2.5  & 5.4   & 0     & 0    & -2.9\%* & -9.1\%*  \\
+                     & DuBois                     & KDUJ & 21   & -2.7  & 7.3*  & 0     & 0    & 0\%     & 0\%      \\
+                     & Erie                       & KERI & 12   & -0.9  & -3.2  & 0     & 0    & 0\%     & 5.6\%    \\
+                     & Harrisburg                 & KMDT & 13   & 2.8*  & -6.6  & 0     & 0    & -1.9\%  & -8.8\%   \\
+                     & Philadelphia               & KPHL & 7    & 0     & 0     & 0     & 0    & 0\%     & 0\%      \\
+                     & Pittsburgh                 & KPIT & 10   & 0.1   & -0.6  & 0     & 0    & 0\%     & 0\%      \\
+                     & Williamsport               & KIPT & 10   & -2.4  & -0.3  & 0     & 0    & 0\%*    & 0\%      \\ \cline{2-10} 
+                     &                            &      & 17   & 0.7   & -2.8  & 0     & 0.6* & 0\%*    & 0\%      \\ \hline
+\multirow{3}{*}{QC}  & Ottawa                     & CYDH & 32   & -2.8  & 0.3*  & 0     & 0    & 0\%*    & 0\%      \\
+                     & Rouyn-Noranda              & CYUY & 12   & 3*    & -0.6  & -0.1* & 0    & 0\%     & 0\%      \\
+                     & Val-d'Or                   & CYVO & 13   & 1.8   & 0*    & 0*    & 0*   & 0\%     & 0\%      \\ \cline{2-10} 
+                     &                            &      & 6    & -0.3  & 0*    & 0*    & 0*   & 0\%     & 0\%      \\ \hline
+\multirow{6}{*}{WI}  & Eau Claire                 & KEAU & 6    & -0.4  & 0*    & 0*    & 0*   & 0\%*    & 0\%      \\
+                     & Green Bay                  & KGRB & 7    & 0     & 0*    & 0*    & 0*   & 0\%     & 0\%      \\
+                     & La Crosse                  & KLSE & 5    & 0     & 0*    & 0*    & 0*   & 0\%     & 0\%      \\
+                     & Madison                    & KMSN & 8    & 0     & 0*    & 0*    & 0*   & 0\%     & 0\%      \\
+                     & Milwaukee                  & KMKE & 6    & -1.3* & 0*    & 0*    & 0*   & 0\%*    & 0\%      \\
+                     & Wausau                     & KAUW & 10   & 1.5   & 0*    & 0*    & 0*   & 0\%     & 0\%      \\ \cline{2-10} 
+                     &                            &      & 10.5 & 0.2   & 0*    & 0*    & 0*   & 0\%*    & 0\%      \\ \hline
+\begin{tabular}[c]{@{}c@{}}Domain \\ Average\end{tabular} &
+   &
+   &
+  9 &
+  -0.6 &
+  0* &
+  0* &
+  0* &
+  0\%* &
+  0\%
 \end{tabular}
-\end{table*}
+\end{table}
+\end{landscape}
+
 
 \begin{table*}
 \label{archetypalpatterns}
