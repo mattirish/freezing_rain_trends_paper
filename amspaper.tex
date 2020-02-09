@@ -171,6 +171,7 @@ The required modification to the monthly Mann-Kendall test further reduces stati
 \subsubsection{Theil-Sen slope estimator}
 In the case that the Mann-Kendall test indicates a monotonic trend exists, the trend is assumed to be linear and the slope calculated. The Theil-Sen slope estimator is a method commonly paired with Mann-Kendall; it is much more accurate than simple linear regression for non-normal data and is robust in the presence of outliers. The slope is defined as the median of the slopes calculated between every permutation of points in the time series, $\{d(t_1,t_2)/[t_2-t_1]:t_2>t_1\}$. As a linear slope estimation, it can be seen as the "typical" index of change over a unit of time. \citep{chandler2011statistical}. The confidence interval is then calculated by computing an inverse normal cumulative density function.
 
+
 \subsection{Observed trends at individual stations and region-wide}
 
 \todo[inline]{ADD: (-1.5$\pm$2.1\degree C [1$\sigma$] in the Great Lakes and Northeast during an event)}
@@ -453,15 +454,21 @@ Cluster & Description                 & Similar to Rauber patterns & No. of even
 \end{table*}
 
 
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{Filtering_Plot.png}
+\caption{\label{fig:trendmap}Time series of total number of total observations per year at Detroit Metropolitan Airport before and after filtering to remove special observations and normalize the number of observations at each station to one per hour (i.e. 8760 per year or 8784 in leap years).}
+\end{figure}
+
 \begin{figure*}
 \centering
-\includegraphics[width=1.0\textwidth]{FZRA_trend_maps_v2.png}
-\caption{\label{fig:trendmap}Elevation maps of the the Great Lakes region summarizing linear trends in total annual hours of freezing rain observed at each station from 1976 to 2014. Representative, or "typical" total annual hours of freezing rain calculated using the Theil-Sen slope estimation method are shown for first year (top left) and last year (top right) of the study period. Trends are depicted on a decadal scale at bottom. Filled circles at each observing station are scaled by $1 - p$ and Xs denote stations where the modified Mann-Kendall test indicates a monotonic trend at the $p<0.05$ level.}
+\includegraphics[width=1.0\textwidth]{FZRA_Trend_Maps.png}
+\caption{\label{fig:trendmap}Elevation maps of the the Great Lakes region summarizing linear trends in total annual hours of freezing rain observed at each station from 1976 to 2014. De-noised or "typical" total annual hours of freezing rain calculated using the Theil-Sen slope estimation method are shown for first year (top left) and last year (top right) of the study period. Trends are depicted on a decadal scale at bottom. Filled circles at each observing station are scaled by $1 - p$ and Xs denote stations where the modified Mann-Kendall test indicates a monotonic trend at the $p<0.05$ level.}
 \end{figure*}
 
 \begin{figure*}
 \centering
-\includegraphics[width=1\textwidth]{Seasonal_new.png}
+\includegraphics[width=1\textwidth]{Seasons_Boxplot.png}
 \caption{\label{fig:seasonal} Comparison of seasonal frequency of freezing rain events between the first 21 years in the study period and the last 18 (to better coincide with the NARR-based dynamics analysis below). Red lines demarcate median values, boxes signify 25-75\% percentiles, whiskers inner fences, and red plus signs indicate outliers (jittered for visibility). Table lists $p$-values calculated using Mann-Whitney rank sum method to test for difference in median value.}
 \end{figure*}
 \todo[size=\small]{re: figure: add Mann-Whitney p-values in their own row.}
@@ -478,7 +485,7 @@ Cluster & Description                 & Similar to Rauber patterns & No. of even
 \caption{\label{fig:clusters} Freezing rain event archetypal patterns created using k-means algorithm with $k=3$. Color ramp and solid lines refer to MSL pressure anomalies in mb, while labeled dotted lines refer to 850 mb geopotential height anomalies in m.}
 \end{figure*}
 
-\begin{figure}2
+\begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{Storm_Pattern_Change.png}
 \caption{\label{fig:clusterchange} Timeline showing all events as classified into each of three clusters as calculated for the 1979--1996 period (top) and change in classification of events from the 1979--1996 period to the 1997--2014 period where the latter period is classified according to the centroids trained on the earlier period (bottom).}
